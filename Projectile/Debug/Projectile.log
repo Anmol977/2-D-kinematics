@@ -1,0 +1,42 @@
+﻿  object.cpp
+C:\Users\anmol\source\repos\Projectile\Projectile\object.cpp(78,19): warning C4244: '=': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\anmol\source\repos\Projectile\Projectile\object.cpp(79,16): warning C4244: '=': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\anmol\source\repos\Projectile\Projectile\object.cpp(91,19): warning C4244: '=': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\anmol\source\repos\Projectile\Projectile\object.cpp(92,16): warning C4244: '=': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\anmol\source\repos\Projectile\Projectile\object.cpp(107,33): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\anmol\source\repos\Projectile\Projectile\object.cpp(108,34): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\anmol\source\repos\Projectile\Projectile\object.cpp(108,27): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\anmol\source\repos\Projectile\Projectile\object.cpp(113,33): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+  Projectile.vcxproj -> C:\Users\anmol\source\repos\Projectile\Debug\Projectile.exe
