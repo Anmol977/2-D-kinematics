@@ -6,7 +6,8 @@
 #define PI 3.14
 
 object::object() :
-	window(sf::VideoMode(800, 800), "2D Kinematics", sf::Style::Close),
+	window(sf::VideoMode(800, 800), "2D Kinematics", sf::Style::Close | sf::Style::Resize),
+	view1(sf::FloatRect(sf::Vector2f(0.f, 0.f), sf::Vector2f(512.f, 512.f));
 	mass(20),
 	t(0),
 	angle(80),
@@ -35,7 +36,7 @@ void object::run() {
 	calcvelo();
 	while (window.isOpen()) {
 
-		processevents();
+		processevents();6
 		timeSinceLastUpdate += clock.restart();
 
 		while (timeSinceLastUpdate > timePerFrame)
@@ -70,28 +71,27 @@ void object::processevents() {
 void object::update(const sf::Time dt) {
 	sf::Vector2f pos = _shape.getPosition();
 	sf::Vector2f movement(0.f, 0.f);
-	if (pos.y <= 680) 
-	{	
+	if (pos.y <= 680)
+	{
 		g = ((G * M) / ((R + pos.y) * (R + pos.y)));
-		t += dt.asSeconds();		
 		uy -= g * dt.asSeconds();
-		movement.x = ux * dt.asSeconds();
-		movement.y = -(uy * dt.asSeconds() + 0.5 * g * dt.asSeconds() * dt.asSeconds());
-		_shape.move(movement);
-		std::cout << pos.x << " " << pos.y <<" "<< dt.asSeconds()<< std::endl;
-		std::cout << ux << " " << uy <<" "<<t<<std::endl;
 	}
 	else {
 		if (ux > 0)
 		{
 			ux -= g * 0.8 * dt.asSeconds();
 		}
-		uy = -uy*0.9;
+		if (uy < 0)
+		{
+			uy = -uy * 0.5;
+		}
+		cout << uy << endl;
 		uy -= g * dt.asSeconds();
-		movement.x = ux * dt.asSeconds();
-		movement.y = -(uy * dt.asSeconds() + 0.5 * g * dt.asSeconds() * dt.asSeconds());
-		_shape.move(movement);
 	}
+	t += dt.asSeconds();
+	movement.x = ux * dt.asSeconds();
+	movement.y = -(uy * dt.asSeconds() + 0.5 * g * dt.asSeconds() * dt.asSeconds());
+	_shape.move(movement);
 }
 
 void object::getsize() {

@@ -26,7 +26,7 @@ private:
 	void calcvelo();
 
 private:
-
+	sf::View view1;
 	sf::RenderWindow window;
 	sf::CircleShape _shape;
 	int mass;
