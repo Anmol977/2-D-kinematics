@@ -36,7 +36,7 @@ void object::run() {
 	calcvelo();
 	while (window.isOpen()) {
 
-		processevents();6
+		processevents();
 		timeSinceLastUpdate += clock.restart();
 
 		while (timeSinceLastUpdate > timePerFrame)
